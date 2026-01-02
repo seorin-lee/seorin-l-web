@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Moonie Eyes';
+    src: url('MoonieEyesRegular.eot');
+    src: local('Moonie Eyes'), local('MoonieEyesRegular'),
+        url('MoonieEyesRegular.eot?#iefix') format('embedded-opentype'),
+        url('MoonieEyesRegular.woff2') format('woff2'),
+        url('MoonieEyesRegular.woff') format('woff'),
+        url('MoonieEyesRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
