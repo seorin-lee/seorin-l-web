@@ -38,16 +38,8 @@ export default function CVWindow() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                안녕하세요! 저는{' '}
-                <a
-                  href="https://www.snu.ac.kr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="retro-link font-semibold"
-                >
-                  서울대학교
-                </a>
-                에서 컴퓨터공학을 전공하고 있는 개발자 이서린입니다.
+                Gude! Ich bin Seorin Lee.
+              
               </motion.p>
 
               <motion.p
@@ -55,9 +47,23 @@ export default function CVWindow() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-              >
-                웹 개발과 사용자 경험 디자인에 열정을 가지고 있으며, 최신 기술 트렌드를 학습하고 적용하는 것을 즐깁니다.
-                React, Next.js, TypeScript를 주로 사용하여 프로젝트를 진행하고 있습니다.
+              >Für mich steht fest. Ich gehe einen neuen Weg!
+              </motion.p>
+
+              <motion.p>
+                Meine Zukunft liegt in der Webentwicklung und im Programmieren. Das fühlt sich richtig an. Hier möchte ich hin, genau das ist mein Ding.
+              </motion.p>
+
+              <motion.p> 
+                Im Moment stecke ich viel Zeit in Onlinekurse und arbeite mit großer Motivation an eigenen Projekten. Ich probiere aus, mache Fehler, lerne daruas und lasse dabei bewusst meinen eigenen Still einfließen.
+              </motion.p>
+
+              <motion.p>
+                Natürlich stehe ich noch am Anfang. Aber ich bin entschlossen, dranzubleiben und mich jeden Tag weiterzuentwicklen.
+              </motion.p>
+
+              <motion.p>
+                Ich freue mich sehr, wenn Sie mich auf diesem Weg begleiten.
               </motion.p>
 
               <motion.div
