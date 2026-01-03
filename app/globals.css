@@ -142,3 +142,27 @@ a.retro-link:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff9fc4;
 }
+
+/* Custom scrollbar for fridge interior */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+/* Fredoka font utility */
+.font-fredoka {
+  font-family: 'Fredoka', var(--font-bubble), sans-serif;
+}

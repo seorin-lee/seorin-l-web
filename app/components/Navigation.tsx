@@ -1,12 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+// Create MotionLink outside component to avoid recreation on each render
+const MotionLink = motion.create(Link);
 
 export default function Navigation() {
   const navItems = [
-    { icon: '🏠', label: 'Home', href: 'https://seorinlee.com' },
-    { icon: '👤', label: 'About', href: '#about' },
-    { icon: '💼', label: 'Portfolio', href: '/portfolio' },
+    { icon: '🏠', label: 'Home', href: '/' },
+    { icon: '👤', label: 'About Seorin', href: '/about' },
+    { icon: '📃', label: 'Portfolio', href: '/portfolio' },
     { icon: '✉️', label: 'Contact', href: '#contact' },
   ];
 
@@ -43,33 +47,61 @@ export default function Navigation() {
           transition={{ type: 'spring', stiffness: 100, damping: 15 }}
           className="flex gap-2 md:gap-3"
         >
-          {navItems.map((item, idx) => (
-            <motion.a
-              key={item.label}
-              href={item.href}
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{
-                type: 'spring',
-                stiffness: 200,
-                damping: 15,
-                delay: idx * 0.1,
-              }}
-              whileHover={{ scale: 1.15, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative"
-            >
-              <div className="glass rounded-2xl p-2 md:p-3 jelly-hover shadow-lg hover:shadow-xl transition-shadow">
-                <span className="text-xl md:text-2xl">{item.icon}</span>
-              </div>
-              {/* Tooltip */}
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                <div className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
-                  {item.label}
+          {navItems.map((item, idx) => {
+            const isExternal = item.href.startsWith('http') || item.href.startsWith('#');
+
+            return isExternal ? (
+              <motion.a
+                key={item.label}
+                href={item.href}
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 200,
+                  damping: 15,
+                  delay: idx * 0.1,
+                }}
+                whileHover={{ scale: 1.15, y: -5 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative"
+              >
+                <div className="glass rounded-2xl p-2 md:p-3 jelly-hover shadow-lg hover:shadow-xl transition-shadow">
+                  <span className="text-xl md:text-2xl">{item.icon}</span>
                 </div>
-              </div>
-            </motion.a>
-          ))}
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  <div className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                    {item.label}
+                  </div>
+                </div>
+              </motion.a>
+            ) : (
+              <MotionLink
+                key={item.label}
+                href={item.href}
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 200,
+                  damping: 15,
+                  delay: idx * 0.1,
+                }}
+                whileHover={{ scale: 1.15, y: -5 }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative"
+              >
+                <div className="glass rounded-2xl p-2 md:p-3 jelly-hover shadow-lg hover:shadow-xl transition-shadow">
+                  <span className="text-xl md:text-2xl">{item.icon}</span>
+                </div>
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                  <div className="bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                    {item.label}
+                  </div>
+                </div>
+              </MotionLink>
+            );
+          })}
         </motion.div>
 
         {/* Right: Social Links */}
