@@ -50,21 +50,10 @@ export default function CVWindow() {
               >Für mich steht fest. Ich gehe einen neuen Weg!
               </motion.p>
 
-              <motion.p>
-                Meine Zukunft liegt in der Webentwicklung und im Programmieren. Das fühlt sich richtig an. Hier möchte ich hin, genau das ist mein Ding.
-              </motion.p>
-
-              <motion.p> 
-                Im Moment stecke ich viel Zeit in Onlinekurse und arbeite mit großer Motivation an eigenen Projekten. Ich probiere aus, mache Fehler, lerne daruas und lasse dabei bewusst meinen eigenen Still einfließen.
-              </motion.p>
-
-              <motion.p>
-                Natürlich stehe ich noch am Anfang. Aber ich bin entschlossen, dranzubleiben und mich jeden Tag weiterzuentwicklen.
-              </motion.p>
-
-              <motion.p>
-                Ich freue mich sehr, wenn Sie mich auf diesem Weg begleiten.
-              </motion.p>
+              <motion.p className="block">Meine Zukunft liegt in der Webentwicklung und im Programmieren. Das fühlt sich richtig an. <br /> Hier möchte ich hin, genau das ist mein Ding.</motion.p>
+              <motion.p className="block">Im Moment stecke ich viel Zeit in Onlinekurse und arbeite mit großer Motivation an eigenen Projekten. Ich probiere aus, mache Fehler, lerne daraus und lasse dabei bewusst meinen eigenen Stil einfließen.</motion.p>
+              <motion.p className="block">Natürlich stehe ich noch am Anfang. Aber ich bin entschlossen, dranzubleiben und mich jeden Tag weiterzuentwicklen.</motion.p>
+              <motion.p className="block">Ich freue mich sehr, wenn Sie mich auf diesem Weg begleiten.</motion.p>
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
