@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 export default function Navigation() {
   const navItems = [
-    { icon: '🏠', label: 'Home', href: '#home' },
+    { icon: '🏠', label: 'Home', href: 'https://seorinlee.com' },
     { icon: '👤', label: 'About', href: '#about' },
-    { icon: '💼', label: 'Work', href: '#work' },
+    { icon: '💼', label: 'Portfolio', href: '/portfolio' },
     { icon: '✉️', label: 'Contact', href: '#contact' },
   ];
 
