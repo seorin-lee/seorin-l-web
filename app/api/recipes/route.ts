@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import OpenAI from 'openai';
+import { GoogleGenAI } from "@google/genai";
 
 export interface Recipe {
   name: string;
@@ -23,25 +23,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!process.env.OPENAI_API_KEY) {
+    if (!process.env.GEMINI_API_KEY) {
       return NextResponse.json(
-        { error: 'OpenAI API key is not configured. Please add OPENAI_API_KEY to your .env.local file.' },
+        { error: 'Gemini API key is not configured. Please add GEMINI_API_KEY to your .env.local file.' },
         { status: 500 }
       );
     }
 
-    const openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+    const ai = new GoogleGenAI({
+      apiKey: process.env.GEMINI_API_KEY,
     });
 
     const ingredientList = ingredients.filter((i: string) => i.trim()).join(', ');
 
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-5.2',
-      messages: [
-        {
-          role: 'system',
-          content: `You are an expert home cooking assistant. Your job is to suggest REAL, EXISTING recipes based on the ingredients the user provides.
+    const systemPrompt = `You are an expert home cooking assistant. Your job is to suggest REAL, EXISTING recipes based on the ingredients the user provides.
 
 CRITICAL RULES - RECIPE VALIDITY:
 - ONLY suggest recipes that are real, commonly recognized dishes found in actual cookbooks or cooking references.
@@ -75,20 +70,21 @@ RECIPE QUALITY GUIDELINES:
   * Mention approximate cooking times where helpful
   * Add brief tips on technique (e.g., "stir frequently to prevent sticking", "let rest for 5 minutes before slicing")
   * Explain why certain steps matter when it helps understanding
-- Steps should be beginner-friendly but detailed enough to actually follow and succeed.`
-        },
-        {
-          role: 'user',
-          content: `I have these ingredients: ${ingredientList}
+- Steps should be beginner-friendly but detailed enough to actually follow and succeed.`;
 
-What can I cook with these?`
-        }
-      ],
-      temperature: 0.7,
-      response_format: { type: 'json_object' },
+    const userPrompt = `I have these ingredients: ${ingredientList}
+
+What can I cook with these?`;
+
+    const completion = await ai.models.generateContent({
+      model: "gemini-2.0-flash",
+      config: {
+        systemInstruction: systemPrompt,
+      },
+      contents: userPrompt,
     });
 
-    const content = completion.choices[0]?.message?.content;
+    const content = completion.text;
 
     if (!content) {
       return NextResponse.json(
@@ -97,16 +93,18 @@ What can I cook with these?`
       );
     }
 
-    const recipeData: RecipeResponse = JSON.parse(content);
+    // Clean up the response - remove markdown code blocks if present
+    const cleanedContent = content.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+    const recipeData: RecipeResponse = JSON.parse(cleanedContent);
 
     return NextResponse.json(recipeData);
   } catch (error) {
     console.error('Recipe API Error:', error);
 
-    if (error instanceof OpenAI.APIError) {
+    if (error instanceof Error) {
       return NextResponse.json(
-        { error: `OpenAI API error: ${error.message}` },
-        { status: error.status || 500 }
+        { error: `Gemini API error: ${error.message}` },
+        { status: 500 }
       );
     }
 
