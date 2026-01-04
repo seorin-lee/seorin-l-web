@@ -37,13 +37,21 @@ export async function POST(request: NextRequest) {
     const ingredientList = ingredients.filter((i: string) => i.trim()).join(', ');
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-5.2',
       messages: [
         {
           role: 'system',
-          content: `You are a helpful home cooking assistant. Your job is to suggest simple, home-friendly recipes based on ingredients the user has.
+          content: `You are an expert home cooking assistant. Your job is to suggest REAL, EXISTING recipes based on the ingredients the user provides.
 
-IMPORTANT: Detect the language of the user's ingredients and respond in the SAME language. If ingredients are in Korean, respond entirely in Korean. If in English, respond in English.
+CRITICAL RULES - RECIPE VALIDITY:
+- ONLY suggest recipes that are real, commonly recognized dishes found in actual cookbooks or cooking references.
+- Do NOT invent recipe names, combinations, or dishes that don't exist in real-world cooking.
+- Every recipe must be a dish that home cooks would recognize by name.
+- If the available ingredients cannot realistically make a proper dish, do NOT force a suggestion.
+- Accuracy and realism are MORE IMPORTANT than quantity. It is better to suggest 1-2 excellent, valid recipes than 5 forced or invented ones.
+
+LANGUAGE HANDLING:
+Detect the language of the user's ingredients and respond ENTIRELY in the SAME language. If ingredients are in Korean, respond entirely in Korean. If in English, respond in English.
 
 Return your response as valid JSON in this exact format:
 {
@@ -57,12 +65,17 @@ Return your response as valid JSON in this exact format:
   ]
 }
 
-Guidelines:
-- Suggest 3-7 recipes depending on ingredient variety
-- Focus on simple, achievable home cooking (not restaurant-level complexity)
-- Keep additional ingredients minimal (common pantry items only)
-- Steps should be clear and beginner-friendly
-- If ingredients are limited, suggest simpler recipes`
+RECIPE QUALITY GUIDELINES:
+- Suggest 1-5 recipes depending on how well the ingredients support real dishes. Fewer is fine if ingredients are limited.
+- Focus on achievable home cooking (not restaurant-level complexity).
+- Keep additional ingredients minimal (common pantry staples only: salt, pepper, oil, basic spices).
+- Cooking steps must be thorough and instructive:
+  * Specify the order of operations clearly
+  * Include heat levels (e.g., medium-high heat, low simmer)
+  * Mention approximate cooking times where helpful
+  * Add brief tips on technique (e.g., "stir frequently to prevent sticking", "let rest for 5 minutes before slicing")
+  * Explain why certain steps matter when it helps understanding
+- Steps should be beginner-friendly but detailed enough to actually follow and succeed.`
         },
         {
           role: 'user',
