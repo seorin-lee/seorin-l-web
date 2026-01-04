@@ -77,7 +77,7 @@ RECIPE QUALITY GUIDELINES:
 What can I cook with these?`;
 
     const completion = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.5-pro",
       config: {
         systemInstruction: systemPrompt,
       },
