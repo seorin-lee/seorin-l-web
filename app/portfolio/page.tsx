@@ -93,11 +93,11 @@ export default function PortfolioPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center mb-8"
             >
-              <h1 className="text-3xl md:text-4xl font-bold font-fredoka text-gray-800 mb-2">
+              <h1 className="text-5xl md:text-7xl text-gray-800 mb-2" style={{ fontFamily: 'Apple Peach, sans-serif' }}>
                 Fridge Recipe Finder
               </h1>
-              <p className="text-gray-600 text-sm md:text-base">
-                Tell me what&apos;s in your fridge, and I&apos;ll suggest recipes!
+              <p className="text-gray-600 text-base md:text-xl font-Poppins font-black leading-relaxed">
+                Tell me what's in your fridge, and I'll suggest recipes!
               </p>
             </motion.div>
 
@@ -131,7 +131,7 @@ export default function PortfolioPage() {
                             onChange={(e) => updateIngredient(index, e.target.value)}
                             onKeyDown={handleKeyPress}
                             placeholder={`Ingredient ${index + 1}`}
-                            className="flex-1 px-4 py-2.5 rounded-xl bg-white/90 border-2 border-white/50 text-gray-700 placeholder-gray-400 text-sm focus:outline-none focus:border-blue-300 focus:ring-2 focus:ring-blue-100 transition-all"
+                            className="flex-1 px-4 py-2.5 rounded-xl bg-white/90 border-2 border-white/50 text-gray-700 placeholder-gray-400 text-sm font-Poppins font-black focus:outline-none focus:border-blue-300 focus:ring-2 focus:ring-blue-100 transition-all"
                             style={{
                               boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.05)',
                             }}
@@ -157,7 +157,7 @@ export default function PortfolioPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={addIngredient}
-                  className="mt-4 w-full py-2.5 rounded-xl bg-gradient-to-r from-green-400 to-emerald-400 text-white font-medium text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
+                  className="mt-4 w-full py-2.5 rounded-xl bg-gradient-to-r from-green-400 to-emerald-400 text-white font-Poppins font-black text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <span className="text-lg">+</span>
                   Add Ingredient
@@ -170,7 +170,7 @@ export default function PortfolioPage() {
                 whileTap={{ scale: 0.95 }}
                 onClick={handleSubmit}
                 disabled={isLoading}
-                className="mt-8 px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-3"
+                className="mt-8 px-8 py-4 rounded-2xl bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 text-white font-Poppins font-black text-lg shadow-xl hover:shadow-2xl transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-3"
               >
                 {isLoading ? (
                   <>
@@ -199,7 +199,7 @@ export default function PortfolioPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
-                  className="mt-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-600 text-center text-sm max-w-md mx-auto"
+                  className="mt-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-600 text-center text-sm font-Poppins font-black max-w-md mx-auto"
                 >
                   {error}
                 </motion.div>
@@ -214,7 +214,7 @@ export default function PortfolioPage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="mt-12"
                 >
-                  <h2 className="text-2xl md:text-3xl font-bold font-fredoka text-center text-gray-800 mb-6">
+                  <h2 className="text-2xl md:text-3xl font-Poppins font-black text-center text-gray-800 mb-6">
                     Here&apos;s what you can make!
                   </h2>
                   <div className="grid gap-4 md:gap-6 md:grid-cols-2">
@@ -232,7 +232,7 @@ export default function PortfolioPage() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="mt-12 text-center text-gray-500"
+                  className="mt-12 text-center text-gray-500 font-Poppins font-black"
                 >
                   <span className="text-4xl mb-3 block">🤔</span>
                   <p>No recipes found. Try adding more ingredients!</p>
@@ -244,7 +244,7 @@ export default function PortfolioPage() {
 
         <footer className="py-8 text-center">
           <div className="glass rounded-full px-6 py-3 inline-block mx-auto">
-            <p className="text-sm md:text-base font-medium">
+            <p className="text-sm md:text-base font-Poppins font-black">
               Made with 💖 by Seorin Lee
             </p>
           </div>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function CVWindow() {
   return (
-    <section className="px-4 py-12 flex justify-center items-center">
+    <section className="px-4 pt-4 pb-12 flex justify-center items-center">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,10 +15,10 @@ export default function CVWindow() {
         {/* Window Container */}
         <div className="window-border rounded-lg overflow-hidden bg-gradient-to-b from-[#edf2ff] to-[#dbeafe]">
           {/* Title Bar */}
-          <div className="bg-gradient-to-r from-[#0066ff] to-[#00a3ff] px-4 py-2 flex items-center justify-between border-b-2 border-black">
+          <div className="bg-gradient-to-r from-[#ff6b9d] to-[#ffc8dd] px-4 py-2 flex items-center justify-between border-b-2 border-black">
             <div className="flex items-center gap-2">
               <div className="text-xl">📄</div>
-              <span className="text-white font-semibold text-sm md:text-base" style={{ fontFamily: 'Fredoka, sans-serif' }}>
+              <span className="text-white font-semibold text-sm md:text-base" style={{ fontFamily: 'Bitend, sans-serif' }}>
                 About_Seorin.txt
               </span>
             </div>
@@ -31,7 +31,7 @@ export default function CVWindow() {
 
           {/* Window Content */}
           <div className="p-6 md:p-8 bg-white/90 backdrop-blur-sm">
-            <div className="space-y-6 text-sm md:text-base leading-relaxed">
+            <div className="space-y-6 text-sm md:text-base leading-relaxed font-Poppins font-normal">
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -39,7 +39,6 @@ export default function CVWindow() {
                 transition={{ delay: 0.1 }}
               >
                 Gude! Ich bin Seorin Lee.
-              
               </motion.p>
 
               <motion.p
@@ -47,111 +46,61 @@ export default function CVWindow() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-              >Für mich steht fest. Ich gehe einen neuen Weg!
+              >
+                Für mich ist klar, dass ich einen neuen Weg einschlagen möchte.
               </motion.p>
 
-              <motion.p className="block">Meine Zukunft liegt in der Webentwicklung und im Programmieren. Das fühlt sich richtig an. <br /> Hier möchte ich hin, genau das ist mein Ding.</motion.p>
-              <motion.p className="block">Im Moment stecke ich viel Zeit in Onlinekurse und arbeite mit großer Motivation an eigenen Projekten. Ich probiere aus, mache Fehler, lerne daraus und lasse dabei bewusst meinen eigenen Stil einfließen.</motion.p>
-              <motion.p className="block">Natürlich stehe ich noch am Anfang. Aber ich bin entschlossen, dranzubleiben und mich jeden Tag weiterzuentwicklen.</motion.p>
-              <motion.p className="block">Ich freue mich sehr, wenn Sie mich auf diesem Weg begleiten.</motion.p>
-
-              <motion.div
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                  <span>💼</span>
-                  <span style={{ fontFamily: 'Fredoka, sans-serif' }}>Experience</span>
-                </h3>
-                <ul className="space-y-2 ml-6">
-                  <li className="list-disc">
-                    Full-stack Developer Intern at{' '}
-                    <a
-                      href="https://www.naver.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="retro-link"
-                    >
-                      NAVER Corp
-                    </a>
-                  </li>
-                  <li className="list-disc">
-                    Frontend Developer at{' '}
-                    <a
-                      href="https://wafflestudio.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="retro-link"
-                    >
-                      Waffle Studio
-                    </a>
-                  </li>
-                </ul>
-              </motion.div>
+                Ich interessiere mich sehr für Webentwicklung und Programmieren. Es macht mir Spaß, Dinge selbst umzusetzen, auszuprobieren und Schritt für Schritt besser zu werden.
+              </motion.p>
 
-              <motion.div
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                  <span>🎓</span>
-                  <span style={{ fontFamily: 'Fredoka, sans-serif' }}>Education</span>
-                </h3>
-                <ul className="space-y-2 ml-6">
-                  <li className="list-disc">
-                    B.S. in Computer Science and Engineering,{' '}
-                    <a
-                      href="https://cse.snu.ac.kr"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="retro-link"
-                    >
-                      Seoul National University
-                    </a>
-                  </li>
-                  <li className="list-disc">Expected Graduation: 2026</li>
-                </ul>
-              </motion.div>
+                Da ich in diesem Bereich noch am Anfang stehe, habe ich diese Website selbst aufgebaut und dabei KI-Tools wie ChatGPT und Claude als Lernhilfe genutzt. Viele Dinge habe ich erst dadurch richtig verstanden. Das Umsetzen, Testen und Verbessern habe ich jedoch selbst gemacht, wodurch ich viel dazugelernt habe.
+              </motion.p>
 
-              <motion.div
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
               >
-                <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                  <span>🛠️</span>
-                  <span style={{ fontFamily: 'Fredoka, sans-serif' }}>Skills</span>
-                </h3>
-                <div className="flex flex-wrap gap-2 ml-6">
-                  {['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Python', 'Git'].map(
-                    (skill, idx) => (
-                      <motion.span
-                        key={skill}
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.5 + idx * 0.05 }}
-                        whileHover={{ scale: 1.1, rotate: -2 }}
-                        className="px-3 py-1 rounded-full text-xs md:text-sm font-medium border-2 border-black bg-gradient-to-r from-[#a8daff] to-[#ffc8dd] cursor-default"
-                      >
-                        {skill}
-                      </motion.span>
-                    )
-                  )}
-                </div>
-              </motion.div>
+                Zurzeit investiere ich viel Zeit in Onlinekurse und eigene Projekte. Ich mache Fehler, lerne daraus und versuche, mich kontinuierlich weiterzuentwickeln.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+              >
+                Mir ist bewusst, dass ich noch am Anfang stehe. Trotzdem bin ich motiviert, dranzubleiben und jeden Tag etwas Neues zu lernen.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7 }}
+              >
+                Ich freue mich, wenn Sie mich auf diesem Weg begleiten.
+              </motion.p>
             </div>
           </div>
 
           {/* Window Status Bar */}
           <div className="bg-[#edf2ff] px-4 py-1 border-t-2 border-black flex items-center justify-between text-xs">
-            <span className="font-mono">Ready</span>
-            <span className="font-mono">© 2026 Seorin Lee</span>
+            <span className="font-Bitend">Ready</span>
+            <span className="font-Bitend">© 2026 Seorin Lee</span>
           </div>
         </div>
       </motion.div>

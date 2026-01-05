@@ -11,7 +11,7 @@ export default function Navigation() {
     { icon: '🏠', label: 'Home', href: '/' },
     { icon: '👤', label: 'About Seorin', href: '/about' },
     { icon: '📃', label: 'Portfolio', href: '/portfolio' },
-    { icon: '✉️', label: 'Contact', href: '#contact' },
+    { icon: '✉️', label: 'Contact', href: '/contact' },
   ];
 
   const socialLinks = [

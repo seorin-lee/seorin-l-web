@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[60vh] px-4 py-12 md:py-20">
+    <section className="relative flex flex-col items-center justify-center min-h-[50vh] px-4 py-8 md:py-12">
       {/* Animated Logo/Name */}
       <motion.div
         initial={{ scale: 0, rotate: -180 }}
@@ -20,8 +20,8 @@ export default function Hero() {
         <h1
           className="text-9xl font-bold"
           style={{
-            fontFamily: 'Alagard, sans-serif',
-            color: '#ffb4f4ff',
+            fontFamily: 'Apple Peach, sans-serif',
+            color: '#ff9fc2ff',
             textShadow: '6px 3px 0px rgba(0,0,0,0.1)',
           }}
         >
@@ -53,8 +53,8 @@ export default function Hero() {
       >
         <div className="bg-white/40 backdrop-blur-md rounded-3xl px-8 py-6">
           <p
-            className="text-2xl md:text-3xl font-semibold text-center"
-            style={{ fontFamily: 'Fairfax, sans-serif' }}
+            className="text-2xl md:text-xl font-black text-center"
+            style={{ fontFamily: 'Bitend, sans-serif' }}
           >
             Hello Web
             <motion.span

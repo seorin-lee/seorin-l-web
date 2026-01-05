@@ -2,53 +2,41 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Honey Pocaline';
-  src: url('/fonts/Honey Pocaline.otf') format('opentype'),
-       url('/fonts/Honey_Pocaline.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'MoonieEyes';
-  src: url('/fonts/MoonieEyesRegular.woff2') format('woff2'),
-       url('/fonts/MoonieEyesRegular.woff') format('woff'),
-       url('/fonts/MoonieEyesRegular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-.font-moonie {
-  font-family: 'MoonieEyes', sans-serif;
-}
-@font-face {
-  font-family: 'Conthrax';
-  src: url('/fonts/Conthrax-SemiBold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Fairfax';
-  src: url('/fonts/FairfaxItalic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Knerd';
-  src: url('/fonts/Knerd Filled.otf') format('opentype');
+  font-family: 'Apple Peach';
+  src: url('/fonts/apple-peach/Apple%20Peach%20otf.otf') format('opentype'),
+       url('/fonts/apple-peach/Apple%20Peach%20ttf.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Alagard';
-  src: url('/fonts/alagard.ttf') format('truetype');
+  font-family: 'Poppins';
+  src: url('/fonts/poppins/Poppins-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bitend';
+  src: url('/fonts/bitend-demo/BitendDEMO.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -165,4 +153,14 @@ a.retro-link:hover {
 /* Fredoka font utility */
 .font-fredoka {
   font-family: 'Fredoka', var(--font-bubble), sans-serif;
+}
+
+/* Poppins font utility */
+.font-Poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Bitend font utility */
+.font-Bitend {
+  font-family: 'Bitend', sans-serif;
 }

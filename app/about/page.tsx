@@ -40,7 +40,7 @@ export default function AboutPage() {
 
         <main className="pt-20 px-4 md:px-8 pb-8">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <h1 className="text-3xl md:text-7xl text-center mb-8" style={{ fontFamily: 'Apple Peach, sans-serif' }}>
               Lebenslauf
             </h1>
           </div>
@@ -56,7 +56,7 @@ export default function AboutPage() {
             <div className="flex gap-4 mt-6">
               <button
                 onClick={handleDownloadPDF}
-                className="px-5 py-2.5 rounded-xl bg-white/80 backdrop-blur border border-gray-200 text-gray-700 text-sm font-medium hover:bg-white hover:shadow-md transition-all flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-white/80 backdrop-blur border border-gray-200 text-gray-700 text-sm font-Poppins font-black hover:bg-white hover:shadow-md transition-all flex items-center gap-2"
               >
                 <svg
                   className="w-4 h-4"
@@ -76,7 +76,7 @@ export default function AboutPage() {
 
               <button
                 onClick={handleDownloadPNG}
-                className="px-5 py-2.5 rounded-xl bg-white/80 backdrop-blur border border-gray-200 text-gray-700 text-sm font-medium hover:bg-white hover:shadow-md transition-all flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-white/80 backdrop-blur border border-gray-200 text-gray-700 text-sm font-Poppins font-black hover:bg-white hover:shadow-md transition-all flex items-center gap-2"
               >
                 <svg
                   className="w-4 h-4"
@@ -99,7 +99,7 @@ export default function AboutPage() {
 
         <footer className="py-8 text-center">
           <div className="glass rounded-full px-6 py-3 inline-block mx-auto">
-            <p className="text-sm md:text-base font-medium">
+            <p className="text-sm md:text-base font-Poppins font-black">
               Made with 💖 by Seorin Lee
             </p>
           </div>

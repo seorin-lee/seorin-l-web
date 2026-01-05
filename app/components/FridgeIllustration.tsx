@@ -47,7 +47,7 @@ export default function FridgeIllustration({ children }: FridgeIllustrationProps
             />
             {/* Freezer snowflake icon */}
             <div className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-300 text-lg">
-              ❄️
+              
             </div>
           </div>
 
@@ -112,7 +112,7 @@ export default function FridgeIllustration({ children }: FridgeIllustrationProps
           transition={{ delay: 0.5, type: 'spring' }}
           className="absolute -top-6 -right-4 text-3xl"
         >
-          ✨
+          
         </motion.div>
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
@@ -120,7 +120,7 @@ export default function FridgeIllustration({ children }: FridgeIllustrationProps
           transition={{ delay: 0.7, type: 'spring' }}
           className="absolute -top-2 -left-6 text-2xl"
         >
-          🧊
+          
         </motion.div>
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
@@ -129,7 +129,7 @@ export default function FridgeIllustration({ children }: FridgeIllustrationProps
           className="absolute bottom-20 -right-8 text-2xl"
           style={{ transform: 'rotate(15deg)' }}
         >
-          🥕
+          
         </motion.div>
       </div>
     </div>
