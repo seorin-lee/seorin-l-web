@@ -18,7 +18,7 @@ export default function Hero() {
         className="text-center mb-8"
       >
         <h1
-          className="text-5xl md:text-9xl font-bold"
+          className="text-6xl md:text-9xl font-bold"
           style={{
             fontFamily: 'Apple Peach, sans-serif',
             color: '#ff9fc2ff',
