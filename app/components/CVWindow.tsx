@@ -31,7 +31,7 @@ export default function CVWindow() {
 
           {/* Window Content */}
           <div className="p-6 md:p-8 bg-white/90 backdrop-blur-sm">
-            <div className="space-y-6 text-sm md:text-base leading-relaxed font-Poppins font-normal">
+            <div className="space-y-6 text-sm md:text-base leading-relaxed font-Poppins font-bold">
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
