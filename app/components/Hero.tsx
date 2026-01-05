@@ -18,7 +18,7 @@ export default function Hero() {
         className="text-center mb-8"
       >
         <h1
-          className="text-9xl font-bold"
+          className="text-5xl md:text-9xl font-bold"
           style={{
             fontFamily: 'Apple Peach, sans-serif',
             color: '#ff9fc2ff',
@@ -84,7 +84,7 @@ export default function Hero() {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-10 left-[10%] text-6xl opacity-60"
+        className="absolute top-2 left-[25%] text-6xl opacity-60"
       >
         ✨
       </motion.div>
@@ -99,7 +99,7 @@ export default function Hero() {
           ease: 'easeInOut',
           delay: 0.5,
         }}
-        className="absolute top-20 right-[15%] text-5xl opacity-60"
+        className="absolute top-10 right-[25%] text-5xl opacity-60"
       >
         🎈
       </motion.div>
@@ -114,7 +114,7 @@ export default function Hero() {
           ease: 'easeInOut',
           delay: 1,
         }}
-        className="absolute bottom-10 left-[20%] text-4xl opacity-60"
+        className="absolute bottom-5 left-[5%] text-4xl opacity-60"
       >
         🦷
       </motion.div>

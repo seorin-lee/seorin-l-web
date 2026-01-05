@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 export default function DecorativeElements() {
   const stickers = [
     { emoji: '🫧', x: '5%', y: '15%', delay: 0, duration: 4 },
-    { emoji: '🐰', x: '90%', y: '25%', delay: 0.5, duration: 3.5 },
-    { emoji: '🎀', x: '10%', y: '60%', delay: 1, duration: 4.5 },
-    { emoji: '🍰', x: '85%', y: '70%', delay: 0.3, duration: 4 },
+    { emoji: '🐰', x: '85%', y: '25%', delay: 0.5, duration: 3.5 },
+    { emoji: '🎀', x: '15%', y: '60%', delay: 1, duration: 4.5 },
+    { emoji: '🍰', x: '80%', y: '70%', delay: 0.3, duration: 4 },
     { emoji: '🤍', x: '15%', y: '85%', delay: 0.8, duration: 3.8 },
     { emoji: '🇰🇷', x: '92%', y: '50%', delay: 0.2, duration: 3.2 },
   ];
@@ -71,7 +71,7 @@ export default function DecorativeElements() {
 
       {/* Geometric shapes */}
       <motion.div
-        className="fixed top-[40%] left-[5%] pointer-events-none z-0"
+        className="fixed top-[30%] left-[10%] pointer-events-none z-0"
         animate={{
           rotate: 360,
         }}
@@ -85,7 +85,7 @@ export default function DecorativeElements() {
       </motion.div>
 
       <motion.div
-        className="fixed bottom-[30%] right-[8%] pointer-events-none z-0"
+        className="fixed bottom-[80%] right-[3%] pointer-events-none z-0"
         animate={{
           rotate: -360,
         }}
