@@ -107,7 +107,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-4">
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/seorin-lee"
+              href="https://www.linkedin.com/in/seorin-l-380944315/"
               target="_blank"
               rel="noopener noreferrer"
               className="jelly-hover inline-flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:shadow-lg"
@@ -121,7 +121,7 @@ export default function Home() {
 
             {/* Email */}
             <a
-              href="mailto:hello@seorinlee.com"
+              href="mailto:seorinlee04@gmail.com"
               className="jelly-hover inline-flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:shadow-lg"
               style={{ background: 'var(--pastel-pink)' }}
               aria-label="Send Email"
